@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#85afafaf"
+        android:layout_alignBottom="@id/fragment_vp"
+         />
+
+    <LinearLayout
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/calendar_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="11dp"
+            app:srcCompat="@drawable/calendar" />
+
+        <ImageView
+            android:id="@+id/remainder_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="11dp"
+            app:srcCompat="@drawable/reminderbar" />
+
+        <View
+            android:layout_width="76dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/tomato_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="11dp"
+            app:srcCompat="@drawable/clock" />
+
+        <ImageView
+            android:id="@+id/settings_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="11dp"
+            app:srcCompat="@drawable/set" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/timeline_tab"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/timeline"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

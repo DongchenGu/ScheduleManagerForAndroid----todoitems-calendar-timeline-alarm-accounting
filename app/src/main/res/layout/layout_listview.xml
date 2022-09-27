@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:descendantFocusability="beforeDescendants">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:descendantFocusability="beforeDescendants">
+
+            <ImageView
+                android:id="@+id/choose_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:baselineAlignBottom="true"
+                android:visibility="visible"
+                app:srcCompat="@drawable/radio_unselected"
+                tools:srcCompat="@drawable/radio_unselected"
+                tools:visibility="visible" />
+            <ImageView
+                android:id="@+id/list_img"
+                android:layout_width="35dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                tools:srcCompat="@mipmap/lise_icon5"
+                android:paddingStart="8dp"
+                android:layout_toRightOf="@id/choose_img"/>
+
+            <TextView
+                android:id="@+id/list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:baselineAlignBottom="true"
+                android:paddingRight="20dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:text="提醒事项"
+                android:textAlignment="center"
+                android:textColor="#1D1D1C"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@id/list_img"/>
+
+
+
+            <TextView
+                android:id="@+id/list_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="11"
+                android:textColor="#B4B4B9"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/inf"
+                android:paddingRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/inf"
+                android:layout_width="25sp"
+                android:layout_height="23sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:paddingRight="2dp"
+                app:srcCompat="@drawable/ino_img"
+                android:focusable="false"/>
+
+
+        </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_tool"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#FFF">
+
+            <TextView
+                android:id="@+id/tv_month_day"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:textColor="#F94038"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry"
+                tools:text="9月20日" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv_month_day"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="12dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    tools:text="2019" />
+
+                <TextView
+                    android:id="@+id/tv_lunar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp"
+                    tools:text="十一" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_current"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/bg_ripple">
+
+                <ImageView
+                    android:id="@+id/ib_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/menu_action_calendar_mvp"
+                    android:tint="#FFF" />
+
+                <TextView
+                    android:id="@+id/tv_current_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="13"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff"
+        app:default_status="shrink"
+        app:calendar_content_view_id="@+id/ScrollView">
+
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:calendar_padding="10dp"
+            app:current_month_text_color="#333333"
+            app:current_month_lunar_text_color="#CFCFCF"
+            app:min_year="2004"
+            app:max_year="2100"
+            app:other_month_text_color="#e1e1e1"
+            app:other_month_lunar_text_color="#e1e1e1"
+            app:scheme_text="假"
+            app:scheme_text_color="#333"
+            app:scheme_theme_color="#128c4b"
+            app:selected_lunar_text_color="#CFCFCF"
+            app:month_view="com.example.chronus.Calendar.CalendarMonthView"
+            app:week_view="com.example.chronus.Calendar.CalendarWeekView"
+            app:selected_text_color="#333"
+            app:selected_theme_color="#80cfcfcf"
+            app:week_background="#fff"
+            app:week_text_color="#111111"
+            app:week_start_with="sun"
+            app:week_view_scrollable="true"
+            app:year_view_day_text_color="#333333"
+            app:year_view_day_text_size="9sp"
+            app:year_view_month_text_color="#ff0000"
+            app:year_view_month_text_size="20sp"
+            app:month_view_show_mode="mode_only_current"
+            app:year_view_scheme_color="#f17706"/>
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#B2ADB8" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:focusable="true"
+               android:focusableInTouchMode="true" >
+               <TextView
+                   android:layout_width="40dp"
+                   android:layout_height="match_parent"
+                   android:gravity="top|center"
+                   android:text="00"
+                   android:textSize="10dp" />
+               <Button
+                   android:id="@+id/btn_1"
+                   android:layout_width="match_parent"
+                   android:layout_height="42dp"
+                   android:textAllCaps="false"
+                   android:background="@drawable/bg_btn"
+                   android:focusableInTouchMode="true"
+                   />
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                android:id="@+id/ul_1"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="01"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    android:onClick="setGeneral"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="02"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="false"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="03"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="false"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="04"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="false"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="05"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="false"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="06"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_7"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="false"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="07"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="08"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="09"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="10"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="11"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="12"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="13"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="14"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="15"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="16"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_17"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_17"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="17"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="18"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_19"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_19"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="19"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="20"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_21"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_21"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="21"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_22"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_22"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="22"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+                <View
+                    android:id="@+id/ul_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#B2ADB8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text="23"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/btn_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_btn"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        </ScrollView>
+    </com.haibin.calendarview.CalendarLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">时间Box</string>
+
+    <string-array name="addType">
+        <item name="l">提醒事项</item>
+        <item name="a">购物单</item>
+        <item name="b">任务项</item>
+        <item name="d">作业</item>
+        <item name="d">电影</item>
+        <item name="d">书单</item>
+    </string-array>
+    <string-array name="general_color">
+        <item>红色</item>
+        <item>黄色</item>
+        <item>橙色</item>
+        <item>绿色</item>
+        <item>浅蓝色</item>
+        <item>紫色</item>
+        <item>灰色</item>
+    </string-array>
+    <string-array name="hour">
+        <item>00:00</item>
+        <item>01:00</item>
+        <item>02:00</item>
+        <item>03:00</item>
+        <item>04:00</item>
+        <item>05:00</item>
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+    </string-array>
+</resources>

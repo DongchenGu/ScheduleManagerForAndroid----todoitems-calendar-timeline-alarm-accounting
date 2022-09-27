@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F5"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="设置"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp" />
+                <RelativeLayout
+                    android:id="@+id/rl_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/avatar" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@id/user_avatar"
+                        android:background="#FFFFFF"
+                        android:text="登录或注册"
+                        android:textColor="#8E8F90"
+                        android:textSize="20sp"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp" />
+                <RelativeLayout
+                    android:id="@+id/rl_push"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"
+                    android:paddingStart="15dp">
+
+                    <ImageView
+                        android:id="@+id/push_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ico_radius"
+                        android:backgroundTint="#157DFA"
+                        android:padding="5dp"
+                        android:src="@drawable/push2"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传数据"
+                        android:layout_toRightOf="@id/push_img"
+                        android:layout_marginStart="20dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/to_left"
+                        app:srcCompat="@drawable/left"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="70dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp" />
+                <RelativeLayout
+                    android:id="@+id/rl_pull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"
+                    android:paddingStart="15dp">
+
+                    <ImageView
+                        android:id="@+id/pull_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ico_radius"
+                        android:backgroundTint="#3DC55E"
+                        android:padding="5dp"
+                        android:src="@drawable/pull"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下载数据"
+                        android:layout_toRightOf="@id/pull_img"
+                        android:layout_marginStart="20dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/to_left"
+                        app:srcCompat="@drawable/left"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="70dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_clean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"
+                    android:paddingStart="15dp">
+
+                    <ImageView
+                        android:id="@+id/clean_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ico_radius"
+                        android:backgroundTint="#FB3D39"
+                        android:padding="5dp"
+                        android:src="@drawable/clean"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="清空数据"
+                        android:layout_toRightOf="@id/clean_img"
+                        android:layout_marginStart="20dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/to_left"
+                        app:srcCompat="@drawable/left"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_cal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"
+                    android:paddingStart="15dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/iv_add_cal"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ico_radius"
+                        android:backgroundTint="#157DFA"
+                        android:padding="5dp"
+                        android:src="@drawable/cal_add" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/to_left"
+                        app:srcCompat="@drawable/left" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toRightOf="@id/iv_add_cal"
+                        android:text="添加日历类型"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_delete_cal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"
+                    android:paddingStart="15dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/iv_delete_cal"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ico_radius"
+                        android:backgroundTint="#FB3D39"
+                        android:padding="5dp"
+                        android:src="@drawable/cal_delete" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/to_left"
+                        app:srcCompat="@drawable/left" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toRightOf="@id/iv_delete_cal"
+                        android:text="删除日历类型"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="70dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#60A4A2A4"
+                    android:padding="12dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </ScrollView>
+
+</LinearLayout>

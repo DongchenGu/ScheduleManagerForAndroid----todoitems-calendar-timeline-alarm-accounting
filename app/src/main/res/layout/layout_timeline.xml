@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_rlview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9FAAAAAA">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#ffc400" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/im_pod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/piccirclegreen" />
+
+
+        <TextView
+            android:id="@+id/txt_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/im_pod"
+            android:text="2019.9.02"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/txt_date_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-65dp"
+            android:layout_toRightOf="@id/im_pod"
+            android:text="2019.9.02"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txt_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-15dp"
+        android:layout_toRightOf="@id/v_line"
+        android:padding="10dp"
+        android:text="时间轴"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txt_date_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="-17dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/v_line"
+        android:padding="10dp"
+        android:text="时间轴"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/underline_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="我已经到底了"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+
+</RelativeLayout>
+
