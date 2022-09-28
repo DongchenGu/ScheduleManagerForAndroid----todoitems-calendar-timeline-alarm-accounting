@@ -105,7 +105,7 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
         //获取日历布局控件ID
         mTextMonthDay = view.findViewById(R.id.tv_month_day);
         mTextYear = view. findViewById(R.id.tv_year);
-        mTextLunar =  view.findViewById(R.id.tv_lunar);
+        //mTextLunar =  view.findViewById(R.id.tv_lunar);
         mRelativeTool =  view.findViewById(R.id.rl_tool);
         mCalendarView = view. findViewById(R.id.calendarView);
         mTextCurrentDay = view.findViewById(R.id.tv_current_day);
@@ -168,7 +168,7 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
             public void onClick(View v) {
                 if(mCalendarView.isYearSelectLayoutVisible()) {
                     mCalendarView.closeYearSelectLayout();
-                    Toast.makeText( activity,"切换到月视图",Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( activity,"changeToMonthView",Toast.LENGTH_SHORT ).show();
                 }
                 mCalendarView.scrollToCurrent();
             }
@@ -182,30 +182,30 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
             public void onFocusChange(View v, boolean hasFocus) {
                 if(hasFocus){
                     switch (v.getId()){
-                        case R.id.btn_1:    btn1.setText("+新建日程");mHour=0;return;
-                        case R.id.btn_2:    btn2.setText("+新建日程");mHour=1;return;
-                        case R.id.btn_3:    btn3.setText("+新建日程");mHour=2;return;
-                        case R.id.btn_4:    btn4.setText("+新建日程");mHour=3;return;
-                        case R.id.btn_5:    btn5.setText("+新建日程");mHour=4;return;
-                        case R.id.btn_6:    btn6.setText("+新建日程");mHour=5;return;
-                        case R.id.btn_7:    btn7.setText("+新建日程");mHour=6;return;
-                        case R.id.btn_8:    btn8.setText("+新建日程");mHour=7;return;
-                        case R.id.btn_9:    btn9.setText("+新建日程");mHour=8;return;
-                        case R.id.btn_10:    btn10.setText("+新建日程");mHour=9;return;
-                        case R.id.btn_11:    btn11.setText("+新建日程");mHour=10;return;
-                        case R.id.btn_12:    btn12.setText("+新建日程");mHour=11;return;
-                        case R.id.btn_13:    btn13.setText("+新建日程");mHour=12;return;
-                        case R.id.btn_14:    btn14.setText("+新建日程");mHour=13;return;
-                        case R.id.btn_15:    btn15.setText("+新建日程");mHour=14;return;
-                        case R.id.btn_16:    btn16.setText("+新建日程");mHour=15;return;
-                        case R.id.btn_17:    btn17.setText("+新建日程");mHour=16;return;
-                        case R.id.btn_18:    btn18.setText("+新建日程");mHour=17;return;
-                        case R.id.btn_19:    btn19.setText("+新建日程");mHour=18;return;
-                        case R.id.btn_20:    btn20.setText("+新建日程");mHour=19;return;
-                        case R.id.btn_21:    btn21.setText("+新建日程");mHour=20;return;
-                        case R.id.btn_22:    btn22.setText("+新建日程");mHour=21;return;
-                        case R.id.btn_23:    btn23.setText("+新建日程");mHour=22;return;
-                        case R.id.btn_24:    btn24.setText("+新建日程");mHour=23;return;
+                        case R.id.btn_1:    btn1.setText("+createSchedule");mHour=0;return;
+                        case R.id.btn_2:    btn2.setText("+createSchedule");mHour=1;return;
+                        case R.id.btn_3:    btn3.setText("+createSchedule");mHour=2;return;
+                        case R.id.btn_4:    btn4.setText("+createSchedule");mHour=3;return;
+                        case R.id.btn_5:    btn5.setText("+createSchedule");mHour=4;return;
+                        case R.id.btn_6:    btn6.setText("+createSchedule");mHour=5;return;
+                        case R.id.btn_7:    btn7.setText("+createSchedule");mHour=6;return;
+                        case R.id.btn_8:    btn8.setText("+createSchedule");mHour=7;return;
+                        case R.id.btn_9:    btn9.setText("+createSchedule");mHour=8;return;
+                        case R.id.btn_10:    btn10.setText("+createSchedule");mHour=9;return;
+                        case R.id.btn_11:    btn11.setText("+createSchedule");mHour=10;return;
+                        case R.id.btn_12:    btn12.setText("+createSchedule");mHour=11;return;
+                        case R.id.btn_13:    btn13.setText("+createSchedule");mHour=12;return;
+                        case R.id.btn_14:    btn14.setText("+createSchedule");mHour=13;return;
+                        case R.id.btn_15:    btn15.setText("+createSchedule");mHour=14;return;
+                        case R.id.btn_16:    btn16.setText("+createSchedule");mHour=15;return;
+                        case R.id.btn_17:    btn17.setText("+createSchedule");mHour=16;return;
+                        case R.id.btn_18:    btn18.setText("+createSchedule");mHour=17;return;
+                        case R.id.btn_19:    btn19.setText("+createSchedule");mHour=18;return;
+                        case R.id.btn_20:    btn20.setText("+createSchedule");mHour=19;return;
+                        case R.id.btn_21:    btn21.setText("+createSchedule");mHour=20;return;
+                        case R.id.btn_22:    btn22.setText("+createSchedule");mHour=21;return;
+                        case R.id.btn_23:    btn23.setText("+createSchedule");mHour=22;return;
+                        case R.id.btn_24:    btn24.setText("+createSchedule");mHour=23;return;
                     }
                 }
                 else {
@@ -349,8 +349,9 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
         mCalendarView.setOnYearChangeListener(this);
         mTextYear.setText(String.valueOf(mCalendarView.getCurYear()));
         mYear = mCalendarView.getCurYear();
-        mTextMonthDay.setText(mCalendarView.getCurMonth() + "月" + mCalendarView.getCurDay() + "日");
-        mTextLunar.setText("今日");
+       // mTextMonthDay.setText(mCalendarView.getCurMonth() + "月" + mCalendarView.getCurDay() + "日");
+        mTextMonthDay.setText(mCalendarView.getCurMonth()  +" "+ mCalendarView.getCurDay() );
+       // mTextLunar.setText("今日");
         mTextCurrentDay.setText(String.valueOf(mCalendarView.getCurDay()));
 
         //左上角月份显示图标点击事件
@@ -362,11 +363,11 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
                     mCalendarView.showYearSelectLayout( mYear );
                 }
                 mCalendarView.showYearSelectLayout( mYear );
-                mTextLunar.setVisibility( View.GONE );
+                //mTextLunar.setVisibility( View.GONE );
                 mTextYear.setVisibility( View.GONE );
                 mTextMonthDay.setText( String.valueOf( mYear ) );
                 if(!mCalendarView.isYearSelectLayoutVisible()){
-                    Toast.makeText( activity, "切换到年视图", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( activity, "changeToYearView", Toast.LENGTH_SHORT ).show();
                 }
             }
         });
@@ -428,7 +429,7 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
                 //刷新时间表
                 deleteView();
                 refreshView(date,list);
-                Toast.makeText( activity,"关闭",Toast.LENGTH_SHORT).show();
+                Toast.makeText( activity,"close",Toast.LENGTH_SHORT).show();
             }
             //新建事项
             if(resultCode==-1){
@@ -446,7 +447,7 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
                 //将新的日程添加到数据库
                 String id=getNewId();
                 mainActivity.Insert_Schedule(id,date,""+start,""+end,title,place,content,""+item);
-                Toast.makeText( activity,"建立成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText( activity,"created",Toast.LENGTH_SHORT).show();
             }}
 
         if(requestCode==1){//从Delete_General_activity回调
@@ -460,7 +461,7 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
                 deleteView();
                 refreshView(date,list);
                 deleteMark();
-                Toast.makeText( activity,"删除成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText( activity,"successfully delete",Toast.LENGTH_SHORT).show();
             }
             //更新日程
             if(resultCode==-1){
@@ -553,7 +554,7 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
 
     //判断该按钮显示的文字是否为"+新建日程"
     public boolean isAdd(Button btn){
-        return btn.getText().toString().equals( "+新建日程" );
+        return btn.getText().toString().equals( "+createSchedule" );
     }
 
     //获取该按钮显示的开始时间
@@ -776,11 +777,39 @@ public class CalendarFragment extends Fragment implements CalendarView.OnDateSel
     @SuppressLint("SetTextI18n")
     @Override
     public void onDateSelected(Calendar calendar, boolean isClick) {
-        mTextLunar.setVisibility(View.VISIBLE);
+        //mTextLunar.setVisibility(View.VISIBLE);
         mTextYear.setVisibility(View.VISIBLE);
-        mTextMonthDay.setText(calendar.getMonth() + "月" + calendar.getDay() + "日");
+        String EnglishMonth=null;
+        switch (calendar.getMonth()){
+            case 1: EnglishMonth="January";
+                    break;
+            case 2: EnglishMonth="February";
+                    break;
+            case 3: EnglishMonth="March";
+                    break;
+            case 4: EnglishMonth="April";
+                    break;
+            case 5: EnglishMonth="May";
+                    break;
+            case 6: EnglishMonth="June";
+                    break;
+            case 7: EnglishMonth="July";
+                    break;
+            case 8: EnglishMonth="August";
+                    break;
+            case 9: EnglishMonth="September";
+                    break;
+            case 10: EnglishMonth="October";
+                    break;
+            case 11: EnglishMonth="November";
+                    break;
+            case 12: EnglishMonth="December";
+                    break;
+
+        }
+        mTextMonthDay.setText(EnglishMonth + " " + calendar.getDay() );
         mTextYear.setText(String.valueOf(calendar.getYear()));
-        mTextLunar.setText(calendar.getLunar());
+        //mTextLunar.setText(calendar.getLunar());
         //获取被选中的日期：年、月、日
         mYear = calendar.getYear();
         mMonth=calendar.getMonth();

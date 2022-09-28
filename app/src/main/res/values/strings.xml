@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">时间Box</string>
+    <string name="app_name">ScheduleManager</string>
 
     <string-array name="addType">
         <item name="l">提醒事项</item>
@@ -10,13 +10,13 @@
         <item name="d">书单</item>
     </string-array>
     <string-array name="general_color">
-        <item>红色</item>
-        <item>黄色</item>
-        <item>橙色</item>
-        <item>绿色</item>
-        <item>浅蓝色</item>
-        <item>紫色</item>
-        <item>灰色</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Green</item>
+        <item>lightBlue</item>
+        <item>purple</item>
+        <item>gray</item>
     </string-array>
     <string-array name="hour">
         <item>00:00</item>

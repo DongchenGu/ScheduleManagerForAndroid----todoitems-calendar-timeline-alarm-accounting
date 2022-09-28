@@ -35,7 +35,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="10dp"
-                android:text="取消"
+                android:text="Cancel"
                 android:textColor="#0B85FB"
                 android:textSize="16sp" />
 
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="新建日程"
+                android:text="CreateSchedule"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="10dp"
-                android:text="完成"
+                android:text="Done"
                 android:textColor="#0B85FB"
                 android:textSize="16sp"/>
         </RelativeLayout>
@@ -84,7 +84,7 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
                         android:background="#FFFFFF"
-                        android:hint="标题"
+                        android:hint="title"
                         android:inputType="text"
                         android:lineHeight="0dp"/>
 
@@ -107,7 +107,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
-                        android:hint="地点"
+                        android:hint="position"
                         android:inputType="text"
                         android:background="#FFFFFF"/>
 
@@ -130,7 +130,7 @@
                         android:layout_gravity="top"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:hint="详细信息"
+                        android:hint="detail"
                         android:inputType="textMultiLine"
                         android:maxLines="15"
                         android:minLines="1"
@@ -154,7 +154,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="12dp"
-                        android:text="开始:"
+                        android:text="start:"
                         android:layout_centerVertical="true"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -192,7 +192,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="12dp"
-                        android:text="结束:"
+                        android:text="end:"
                         android:layout_centerVertical="true"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -221,7 +221,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="12dp"
-                            android:text="日程颜色:"
+                            android:text="color:"
                             android:layout_centerVertical="true"
                             android:textColor="#000000"
                             android:textSize="18sp"/>
