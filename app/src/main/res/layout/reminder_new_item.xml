@@ -33,7 +33,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="10dp"
-                android:text="取消"
+                android:text="Cancel"
                 android:textColor="#0B85FB"
                 android:textSize="16sp"
                 android:onClick="Store"/>
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="添加事项"
+                android:text="AddItem"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -55,7 +55,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="10dp"
                 android:onClick="Store"
-                android:text="完成"
+                android:text="Done"
                 android:textColor="#0B85FB"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -94,7 +94,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
-                        android:hint="事项名称"
+                        android:hint="title"
                         android:inputType="text"
                         android:background="#FFFFFF"/>
 
@@ -117,7 +117,7 @@
                         android:layout_gravity="top"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:hint="详细信息"
+                        android:hint="detail"
                         android:inputType="textMultiLine"
                         android:maxLines="15"
                         android:minLines="1"
@@ -145,7 +145,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:layout_marginBottom="12dp"
-                        android:text="在指定日期提醒我:"
+                        android:text="remind at designated date:"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -184,7 +184,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:layout_marginBottom="12dp"
-                        android:text="在指定时间提醒我:"
+                        android:text="remind at designated time:"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -210,7 +210,7 @@
                         android:id="@+id/left_name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="归属列表："
+                        android:text="Belong to:"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:layout_marginStart="12dp"

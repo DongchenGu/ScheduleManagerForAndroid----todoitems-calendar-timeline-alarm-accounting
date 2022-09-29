@@ -577,7 +577,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return  result.append(content).toString();
         } else {
             cursor.close();
-            return result.append("该ID下没有信息，出现未知错误").toString();
+           // return result.append("该ID下没有信息，出现未知错误").toString();
+            return result.append("You can only check the unfinished items!").toString();
         }
     }
     //显示数据库里指定行的ID

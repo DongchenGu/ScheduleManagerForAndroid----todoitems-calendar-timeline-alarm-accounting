@@ -29,7 +29,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/shape_seacher"
             android:singleLine="true"
-            android:text="新提醒列表"
+            android:text="NewReminderList"
             android:textAlignment="center" />
 
     </RelativeLayout>
@@ -49,37 +49,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="红色" />
+                android:text="Red" />
 
             <RadioButton
                 android:id="@+id/rb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="橙色" />
+                android:text="Orange" />
 
             <RadioButton
                 android:id="@+id/rb3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="黄色" />
+                android:text="Yellow" />
 
             <RadioButton
                 android:id="@+id/rb4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="绿色" />
+                android:text="Green" />
 
             <RadioButton
                 android:id="@+id/rb5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="浅蓝色" />
+                android:text="lightBlue" />
 
             <RadioButton
                 android:id="@+id/rb6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="深蓝色" />
+                android:text="DeepBlue" />
         </RadioGroup>
     </RelativeLayout>
 </LinearLayout>

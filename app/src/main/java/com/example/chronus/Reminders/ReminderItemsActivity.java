@@ -165,9 +165,9 @@ public class ReminderItemsActivity extends AppCompatActivity implements View.OnC
     private void getListView(String t){
         Is_Finished =t;
         if(t.equals("0"))
-            Toast.makeText(MainActivity.mainActivity,"进入未完成事项页面",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.mainActivity,"page for to-do items",Toast.LENGTH_SHORT).show();
         else{
-            Toast.makeText(MainActivity.mainActivity,"进入已完成事项页面",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.mainActivity,"page for the finished items",Toast.LENGTH_SHORT).show();
         }
         List<Map<String, Object>> listitem = new ArrayList<Map<String, Object>>();
 
@@ -190,7 +190,7 @@ public class ReminderItemsActivity extends AppCompatActivity implements View.OnC
         //最后加一个添加item
         Map<String, Object> showitem = new HashMap<String, Object>();
         showitem.put("item_img", imgAdd);
-        showitem.put("item_name", "添加新事项");
+        showitem.put("item_name", "Add to-do item");
         listitem.add(showitem);
         //创建一个simpleAdapter
         SimpleAdapter myAdapter = new SimpleAdapter(context, listitem, R.layout.layout_item_view, new String[]{"item_img", "item_name"},
@@ -223,7 +223,7 @@ public class ReminderItemsActivity extends AppCompatActivity implements View.OnC
         //最后加一个添加item
         Map<String, Object> showitem = new HashMap<String, Object>();
         showitem.put("item_img", imgAdd);
-        showitem.put("item_name", "添加新事项");
+        showitem.put("item_name", "Add to-do item");
         listitem.add(showitem);
         //创建一个simpleAdapter
         SimpleAdapter myAdapter = new SimpleAdapter(context, listitem, R.layout.layout_item_view, new String[]{"item_img", "item_name"},
@@ -243,7 +243,7 @@ public class ReminderItemsActivity extends AppCompatActivity implements View.OnC
 
 
 
-                if(sel_tv.getText().equals("添加新事项")){
+                if(sel_tv.getText().equals("Add to-do item")){
                     //弹出新建
                     //Intent intent = new Intent(getActivity(), ADD_DATA_Activity.class);
                     Log.d("id",Integer.toString(MainActivity.getCount()));
@@ -306,7 +306,9 @@ public class ReminderItemsActivity extends AppCompatActivity implements View.OnC
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 TextView sel_tv = view.findViewById(R.id.item_name);
-                if(sel_tv.getText().equals("添加新事项")){
+                if(sel_tv.getText().equals("Add to-do item")){
+                    //不操作
+                }else if(Is_Finished=="1"){
                     //不操作
                 }else{
                     //弹出事件详情
@@ -383,15 +385,15 @@ public class ReminderItemsActivity extends AppCompatActivity implements View.OnC
                             //是否删除，弹出一个对话框问问
                             AlertDialog.Builder builder = new AlertDialog.Builder(context);
                             AlertDialog alertDialog = builder
-                                    .setTitle("系统提示")
-                                    .setMessage("你确定要删除列表吗？")
-                                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                                    .setTitle("Hint")
+                                    .setMessage("You sure to delete the item?你确定要删除列表吗？")
+                                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int n) {
 
                                         }
                                     })
-                                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int n) {
                                             //获取列表id，准备开始删除
@@ -416,7 +418,7 @@ public class ReminderItemsActivity extends AppCompatActivity implements View.OnC
                             }else{
                                 getListView("1");
                                 //menuItem.setTitle("返回");
-                                Toast.makeText(context,"此页面为已完成的项目",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context,"all finished items",Toast.LENGTH_SHORT).show();
                             }
 
                             return true;

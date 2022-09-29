@@ -151,8 +151,8 @@ public class RemindersFragment extends Fragment {
         edit_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edit_tv.getText().equals("编辑")){
-                    edit_tv.setText("完成");
+                if(edit_tv.getText().equals("Edit")){
+                    edit_tv.setText("Done");
                     delete_tv.setVisibility(View.VISIBLE);
                     edit_tv.getPaint().setFakeBoldText(true);
 
@@ -178,7 +178,7 @@ public class RemindersFragment extends Fragment {
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                             mCallback.onEventsSelected(position);
-                            if(edit_tv.getText().equals("完成")){
+                            if(edit_tv.getText().equals("Done")){
                                 if(!selseted_num.contains(position)){
                                     selseted_num.add(position);//选中后把当前项加入到队列中
                                     ImageView choose_img = view.findViewById(R.id.choose_img);
@@ -196,7 +196,7 @@ public class RemindersFragment extends Fragment {
                         }
                     });
                 }else{
-                    edit_tv.setText("编辑");
+                    edit_tv.setText("Edit");
                     delete_tv.setVisibility(View.INVISIBLE);
 
                     edit_tv.getPaint().setFakeBoldText(false);
@@ -215,23 +215,23 @@ public class RemindersFragment extends Fragment {
                 //询问确认对话框
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 AlertDialog alertDialog = builder
-                        .setTitle("系统提示")
-                        .setMessage("你确定要删除列表吗？")
-                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        .setTitle("Alert")
+                        .setMessage("You sure to delete the list？")
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int n) {
 
                             }
                         })
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int n) {
                                 if(selseted_num.isEmpty()){
                                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                                     AlertDialog alertDialog = builder
-                                            .setTitle("系统提示")
-                                            .setMessage("没有选择要删除的列表")
-                                            .setNegativeButton("确认", new DialogInterface.OnClickListener() {
+                                            .setTitle("Alert")
+                                            .setMessage("No list choosen")
+                                            .setNegativeButton("Yes", new DialogInterface.OnClickListener() {
                                                 @Override
                                                 public void onClick(DialogInterface dialogInterface, int n) {
 
@@ -247,7 +247,7 @@ public class RemindersFragment extends Fragment {
                                         MainActivity.DELETE_LIST_By_ID(MainActivity.ShowLineID_inList(line));
                                         Log.d("Delete",String.valueOf(line));
                                     }
-                                    edit_tv.setText("编辑");
+                                    edit_tv.setText("Edit");
                                     delete_tv.setVisibility(View.INVISIBLE);
 
                                     edit_tv.getPaint().setFakeBoldText(false);
@@ -278,7 +278,7 @@ public class RemindersFragment extends Fragment {
                 //et.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 //imageView.setImageResource(R.mipmap.lise_icon1);
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-                builder.setTitle("新建列表");
+                builder.setTitle("Create new List");
 
                 final View add_view = LayoutInflater.from(getActivity()).inflate(R.layout.reminder_add_layout,null,false);
                 builder.setView(add_view);
@@ -300,7 +300,7 @@ public class RemindersFragment extends Fragment {
                     }
                 });
                         //builder.setView(imageView);
-                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
                         MediaPlayer mMediaPlayer;
@@ -310,12 +310,12 @@ public class RemindersFragment extends Fragment {
                         Integer list_id_number = ++lastID;
                         //添加列表的数据库
                         MainActivity.INSERT_List(list_id_number.toString(),et.getText().toString(),imgIds[Temp_Color].toString(),"0" );
-                        Toast.makeText(getActivity(), "成功新建列表 "+et.getText().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "successfully created! "+et.getText().toString(), Toast.LENGTH_LONG).show();
                         //列表刷新
                         getListView();
                     }
                 });
-                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -453,7 +453,7 @@ public class RemindersFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View v, int position, long l) {
                 mCallback.onEventsSelected(position);
                 edit_tv = view.findViewById(R.id.edit_tv);
-                if(edit_tv.getText().equals("编辑")){
+                if(edit_tv.getText().equals("Edit")){
                     Intent intent = new Intent(getContext(), ReminderItemsActivity.class);
                     intent.putExtra("Line", MainActivity.Show_List_name(MainActivity.ShowLineID_inList(position)));
                     intent.putExtra("ListId",MainActivity.ShowLineID_inList(position));

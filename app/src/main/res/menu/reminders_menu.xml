@@ -3,11 +3,11 @@
     <item
         android:id="@+id/rem_delete"
         android:icon="@android:drawable/ic_menu_my_calendar"
-        android:title="删除列表" />
+        android:title="Delete This List" />
 
     <item
         android:id="@+id/rem_finish"
         android:icon="@android:drawable/presence_away"
-        android:title="显示已完成项目" />
+        android:title="Show Finished Items" />
 
 </menu>

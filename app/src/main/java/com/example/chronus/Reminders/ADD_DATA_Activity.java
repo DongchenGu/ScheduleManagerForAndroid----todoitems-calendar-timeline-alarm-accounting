@@ -90,11 +90,11 @@ public class ADD_DATA_Activity extends AppCompatActivity implements View.OnClick
 
 
         //如果没设置日期
-        if(tvDate.getText().equals("点击添加时间")){
+        if(tvDate.getText().equals("AddDate")){
             //没设置日期，不设置提醒，时间为空
             Alerttime = "未设置时间";
             Notife_or_not =false;
-        }else if(tvTime.getText().equals("点击添加时间")){
+        }else if(tvTime.getText().equals("AddTime")){
             //设置了日期没设置时刻，那按照9：00计算
             Alerttime = year.toString()+"-"+(month)+"-"+
                     day.toString()+"-"+"9"+"-"+"0";
@@ -162,9 +162,9 @@ public class ADD_DATA_Activity extends AppCompatActivity implements View.OnClick
         tvTime = (TextView) findViewById(R.id.tv_time);//时间
         llDate.setOnClickListener(this);
         llTime.setOnClickListener(this);
-        tvDate.setText("点击添加时间");
+        tvDate.setText("AddDate");
         tvDate.setTextColor(Color.parseColor("#A4A2A4"));
-        tvTime.setText("点击添加时间");
+        tvTime.setText("AddTime");
         tvTime.setTextColor(Color.parseColor("#A4A2A4"));
         TextView cancel_tv = findViewById(R.id.cancel_tv);
         cancel_tv.setOnClickListener(new View.OnClickListener() {
@@ -199,17 +199,17 @@ public class ADD_DATA_Activity extends AppCompatActivity implements View.OnClick
         switch (v.getId()) {
             case R.id.ll_date:
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setPositiveButton("设置", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("set", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (date.length() > 0) { //清除上次记录的日期
                             date.delete(0, date.length());
                         }
-                        tvDate.setText(date.append(String.valueOf(year)).append("年").append(String.valueOf(month+1)).append("月").append(day).append("日"));
+                        tvDate.setText(date.append(String.valueOf(year)).append("-").append(String.valueOf(month+1)).append("-").append(day));
                         dialog.dismiss();
                     }
                 });
-                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -219,7 +219,7 @@ public class ADD_DATA_Activity extends AppCompatActivity implements View.OnClick
                 View dialogView = View.inflate(context, R.layout.dialog_date, null);
                 final DatePicker datePicker = (DatePicker) dialogView.findViewById(R.id.datePicker);
 
-                dialog.setTitle("设置日期");
+                dialog.setTitle("SetDate");
                 dialog.setView(dialogView);
                 dialog.show();
                 //初始化日期监听事件
@@ -227,17 +227,17 @@ public class ADD_DATA_Activity extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.ll_time:
                 AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
-                builder2.setPositiveButton("设置", new DialogInterface.OnClickListener() {
+                builder2.setPositiveButton("set", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (time.length() > 0) { //清除上次记录的日期
                             time.delete(0, time.length());
                         }
-                        tvTime.setText(time.append(String.valueOf(hour)).append("时").append(String.valueOf(minute)).append("分"));
+                        tvTime.setText(time.append(String.valueOf(hour)).append(":").append(String.valueOf(minute)));
                         dialog.dismiss();
                     }
                 });
-                builder2.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                builder2.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -250,7 +250,7 @@ public class ADD_DATA_Activity extends AppCompatActivity implements View.OnClick
                 timePicker.setCurrentMinute(minute);
                 timePicker.setIs24HourView(true); //设置24小时制
                 timePicker.setOnTimeChangedListener(this);
-                dialog2.setTitle("设置时间");
+                dialog2.setTitle("ChooseTime");
                 dialog2.setView(dialogView2);
                 dialog2.show();
                 break;

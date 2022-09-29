@@ -81,9 +81,9 @@ public class Update_DATA_Activity extends AppCompatActivity implements View.OnCl
         tvTime =  findViewById(R.id.tv_time);//时间
         llDate.setOnClickListener(this);
         llTime.setOnClickListener(this);
-        tvDate.setText("点击添加时间");
+        tvDate.setText("AddDate");
         tvDate.setTextColor(Color.parseColor("#A4A2A4"));
-        tvTime.setText("点击添加时间");
+        tvTime.setText("AddTime");
         tvTime.setTextColor(Color.parseColor("#A4A2A4"));
 
         item_title.setText(MainActivity.Get_Title_by_ID(item_id));
@@ -120,11 +120,11 @@ public class Update_DATA_Activity extends AppCompatActivity implements View.OnCl
 
 
         //如果没设置日期
-        if(tvDate.getText().equals("点击添加时间")){
+        if(tvDate.getText().equals("AddDate")){
             //没设置日期，不设置提醒，时间为空
             Alerttime = "未设置时间";
             Notife_or_not =false;
-        }else if(tvTime.getText().equals("点击添加时间")){
+        }else if(tvTime.getText().equals("AddTime")){
             //设置了日期没设置时刻，那按照9：00计算
             Alerttime = year.toString()+"-"+(Infactmonth).toString()+"-"+
                     day.toString()+"-"+"9"+"-"+"0";
@@ -191,7 +191,7 @@ public class Update_DATA_Activity extends AppCompatActivity implements View.OnCl
         switch (v.getId()) {
             case R.id.ll_date:
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setPositiveButton("设置", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (date.length() > 0) { //清除上次记录的日期
@@ -201,7 +201,7 @@ public class Update_DATA_Activity extends AppCompatActivity implements View.OnCl
                         dialog.dismiss();
                     }
                 });
-                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -219,7 +219,7 @@ public class Update_DATA_Activity extends AppCompatActivity implements View.OnCl
                 break;
             case R.id.ll_time:
                 AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
-                builder2.setPositiveButton("设置", new DialogInterface.OnClickListener() {
+                builder2.setPositiveButton("Set", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (time.length() > 0) { //清除上次记录的日期
@@ -229,7 +229,7 @@ public class Update_DATA_Activity extends AppCompatActivity implements View.OnCl
                         dialog.dismiss();
                     }
                 });
-                builder2.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                builder2.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

@@ -23,7 +23,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="25dp"
             android:layout_weight="1"
-            android:text="删除"
+            android:text="Delete"
             android:textColor="#0B85FB"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -38,7 +38,7 @@
             android:layout_centerInParent="true"
             android:layout_marginRight="25dp"
             android:layout_weight="1"
-            android:text="编辑"
+            android:text="Edit"
             android:textColor="#0B85FB"
             android:textSize="16sp" />
 
@@ -106,7 +106,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="提醒列表"
+                    android:text="ReminderList"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="22sp" />
@@ -118,7 +118,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="17dp"
                     android:layout_marginRight="10dp"
-                    android:text="添加列表"
+                    android:text="AddList"
                     android:textAlignment="center"
                     android:textColor="#0B85FB"
                     android:textSize="16sp" />

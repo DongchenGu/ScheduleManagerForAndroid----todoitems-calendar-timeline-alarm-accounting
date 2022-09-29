@@ -59,7 +59,7 @@
 
                 android:layout_centerInParent="true"
 
-                android:text="列表"
+                android:text="List"
                 android:textColor="#0B85FB"
                 android:textSize="16sp"
                 android:layout_toRightOf="@id/imageView"/>
