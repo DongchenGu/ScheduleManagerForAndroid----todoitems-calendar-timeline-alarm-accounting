@@ -67,18 +67,28 @@ public class TimeLineFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.layout_recyclerview, container, false);
-        init();
+        //init();
         return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        //init();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
         init();
     }
 
+
+
     private void  init(){
         RecyclerView rlView = (RecyclerView) view.findViewById(R.id.activity_rlview);
+        //增大缓存，否则一滚动会缺失数据
+        rlView.setItemViewCacheSize(40);
 //        rlTitle = (RelativeLayout) view.findViewById(R.id.rl_title);
 //        vLine = view.findViewById(R.id.v_line);
 //        txtDateTime = (TextView) view.findViewById(R.id.txt_date_time);
@@ -91,7 +101,9 @@ public class TimeLineFragment extends Fragment {
         // recyclerview绑定适配器
         rlView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new TimeAdapter((MainActivity) getActivity(), list);
+        //adapter.setHasStableIds(true);
         rlView.setAdapter(adapter);
+
 
 
     }
@@ -145,15 +157,16 @@ public class TimeLineFragment extends Fragment {
         }
 
         if(MainActivity.user_name.equals("admin")){
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-10-00"),"","示例数据"));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-12-00"),"在登录后消失",""));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-14-00"),"","与李铭的电话会议"));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-19-30"),"查看花呗账单",""));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-12-05"),"找老师签字",""));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-12-05"),"去图书馆还书",""));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-19-30"),"","去实验室准备器材"));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-19-30"),"数学建模开始",""));
-            list.add(new TimeData(TimeFormat.toDate(today_day+"-20-00"),"","小组会议讨论"));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-10-00"),"","sample data,disappears after login"));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-12-00"),"the Schedules you created in the calendar is also shown here!",""));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-14-00"),"","the Reminders you created for today is also shown here!"));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-19-30"),"View credit card statement",""));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-12-05"),"Discuss project assignments with supervisors",""));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-12-05"),"Return books to the library",""));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-19-30"),"","Go to the lab to record the results"));
+            //list.add(new TimeData(TimeFormat.toDate(today_day+"-19-30"),"数学建模开始",""));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-20-00"),"","Group discussion of experimental results"));
+            list.add(new TimeData(TimeFormat.toDate(today_day+"-24-00"),"","end of today"));
 
         }
 

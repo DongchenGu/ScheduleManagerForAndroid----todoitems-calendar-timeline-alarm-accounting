@@ -1356,6 +1356,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //获取当前时间
         //Date date = new Date(System.currentTimeMillis());
     }
+
      public void LogOut(){
         final SharedPreferences SP_user = getSharedPreferences("user_name",MODE_PRIVATE);
         SharedPreferences.Editor editor = SP_user.edit();
