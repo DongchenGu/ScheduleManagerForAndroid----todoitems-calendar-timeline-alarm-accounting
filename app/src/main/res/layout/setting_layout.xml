@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="15dp"
-                android:text="设置"
+                android:text="Settings"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
@@ -60,7 +60,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_toRightOf="@id/user_avatar"
                         android:background="#FFFFFF"
-                        android:text="登录或注册"
+                        android:text="Login/LogOut"
                         android:textColor="#8E8F90"
                         android:textSize="20sp"
                         android:visibility="visible" />
@@ -101,7 +101,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="上传数据"
+                        android:text="UpdateData"
                         android:layout_toRightOf="@id/push_img"
                         android:layout_marginStart="20dp"
                         android:textColor="#000000"
@@ -146,7 +146,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="下载数据"
+                        android:text="DownloadData"
                         android:layout_toRightOf="@id/pull_img"
                         android:layout_marginStart="20dp"
                         android:textColor="#000000"
@@ -193,7 +193,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="清空数据"
+                        android:text="ClearData"
                         android:layout_toRightOf="@id/clean_img"
                         android:layout_marginStart="20dp"
                         android:textColor="#000000"

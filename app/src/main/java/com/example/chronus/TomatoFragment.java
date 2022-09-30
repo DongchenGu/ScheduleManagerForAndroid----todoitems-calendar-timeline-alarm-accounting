@@ -59,13 +59,13 @@ public class TomatoFragment extends Fragment {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(textView.getText().toString().equals("开始专注")){
-                    textView.setText("放弃番茄");
+                if(textView.getText().toString().equals("Start to Focus")){
+                    textView.setText("Give up");
                     textView.setTextColor(Color.parseColor("#9FA0A1"));
                     tv_exp.setVisibility(View.INVISIBLE);
                     clockView.start();
                 }else{
-                    textView.setText("开始专注");
+                    textView.setText("Start to Focus");
                     textView.setTextColor(Color.parseColor("#AAE3170D"));
                     tv_exp.setVisibility(View.VISIBLE);
                     clockView.stop();

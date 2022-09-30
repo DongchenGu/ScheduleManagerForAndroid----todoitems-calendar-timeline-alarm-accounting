@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginStart="15dp"
-            android:text="番茄钟"
+            android:text="Pomodoro Technique"
             android:textColor="#000000"
             android:textSize="30sp" />
 
@@ -34,7 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="48dp"
-        android:text="开始专注"
+        android:text="Start to Focus"
         android:textColor="#AAE3170D"
         android:textSize="24sp" />
 
@@ -45,6 +45,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="120dp"
-        android:text="滑动圆圈调整时间"
+        android:text="Slide the circle to adjust the time"
         android:textColor="#DDa4a2a4" />
 </RelativeLayout>

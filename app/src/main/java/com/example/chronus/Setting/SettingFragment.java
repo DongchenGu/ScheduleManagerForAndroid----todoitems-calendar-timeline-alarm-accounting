@@ -90,7 +90,7 @@ public class SettingFragment extends Fragment{
         //如果用户已经创建用户就显示已创建的用户
         if(MainActivity.user_name.equals("admin") )
         {
-            user_name.setText("登陆或注册");
+            user_name.setText("Login/LogOut");
             Log.d("Setting-UserName",MainActivity.user_name);
             //user_name.setTextColor(0X8E8F90);
         } else{
@@ -120,19 +120,19 @@ public class SettingFragment extends Fragment{
                 if(SettingFragment.isLogin){
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     AlertDialog alertDialog = builder
-                            .setTitle("系统提示")
-                            .setMessage("您已经登陆，要退出？")
-                            .setNegativeButton("退出", new DialogInterface.OnClickListener() {
+                            .setTitle("System Alert")
+                            .setMessage("Sure to Log Out？")
+                            .setNegativeButton("Log Out", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int n) {
                                     MainActivity.user_name ="admin";
                                     setLoginFalse();
                                     Log.d("Back", "退出登陆");
                                     init();//刷新用户
-                                    Toast.makeText(getContext(), "您已登出", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(), "Log Out", Toast.LENGTH_SHORT).show();
                                 }
                             })
-                            .setPositiveButton("保持登陆", new DialogInterface.OnClickListener() {
+                            .setPositiveButton("Stay Log In", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int n) {
 
@@ -158,9 +158,9 @@ public class SettingFragment extends Fragment{
                 if(MainActivity.user_name.equals("admin")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     AlertDialog alertDialog = builder
-                            .setTitle("系统提示")
-                            .setMessage("请在登录后尝试此操作。")
-                            .setNegativeButton("确定", new DialogInterface.OnClickListener() {
+                            .setTitle("System Alert")
+                            .setMessage("Please attempt the operation after you login")
+                            .setNegativeButton("Got it", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int n) {
 
@@ -180,9 +180,9 @@ public class SettingFragment extends Fragment{
                 if(MainActivity.user_name.equals("admin")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     AlertDialog alertDialog = builder
-                            .setTitle("系统提示")
-                            .setMessage("请在登录后尝试此操作。")
-                            .setNegativeButton("确定", new DialogInterface.OnClickListener() {
+                            .setTitle("System Alert")
+                            .setMessage("Please attempt the operation after you login。")
+                            .setNegativeButton("Got it", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int n) {
 
@@ -202,16 +202,16 @@ public class SettingFragment extends Fragment{
                 //Log.d("test:",Boolean.toString(getisLogin()));
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                 AlertDialog alertDialog = builder
-                        .setTitle("系统提示")
-                        .setMessage("确定要清空所有数据吗，此操作不可复原！")
-                        .setNegativeButton("确定", new DialogInterface.OnClickListener() {
+                        .setTitle("System Alert")
+                        .setMessage("You sure to clear all the data? Not Recoverable！")
+                        .setNegativeButton("Clear", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int n) {
                                 MainActivity.Delete_All();
                                 Toast.makeText(getContext(), "已清除用户所有数据", Toast.LENGTH_SHORT).show();
                             }
                         })
-                        .setPositiveButton("取消", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int n) {
 

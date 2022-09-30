@@ -72,15 +72,15 @@ public class LoginActivity extends AppCompatActivity   {
                         //检测用户是否存在，如果不存在执行以下步骤
                         AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                         AlertDialog alertDialog = builder
-                                .setTitle("系统提示")
-                                .setMessage("当前用户不存在，是否用当前输入用户名和密码创建账户？")
-                                .setNegativeButton("不创建", new DialogInterface.OnClickListener() {
+                                .setTitle("System Alert")
+                                .setMessage("User Not Exist，use your current input to create the account？")
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int n) {
 
                                     }
                                 })
-                                .setPositiveButton("创建", new DialogInterface.OnClickListener() {
+                                .setPositiveButton("Create", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int n) {
                                         MainActivity.CreateUser(user_name.getText().toString(), password.getText().toString());
@@ -96,15 +96,15 @@ public class LoginActivity extends AppCompatActivity   {
                                         //是否保留示例数据
                                         AlertDialog.Builder builder2 = new AlertDialog.Builder(LoginActivity.this);
                                         AlertDialog alertDialog2 = builder2
-                                                .setTitle("示例数据")
-                                                .setMessage("是否保留示例数据")
-                                                .setNegativeButton("不保留", new DialogInterface.OnClickListener() {
+                                                .setTitle("Sample Data")
+                                                .setMessage("Do you need the Sample Data?")
+                                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                                                     @Override
                                                     public void onClick(DialogInterface dialogInterface, int n) {
                                                         finish();
                                                     }
                                                 })
-                                                .setPositiveButton("保留", new DialogInterface.OnClickListener() {
+                                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                                     @Override
                                                     public void onClick(DialogInterface dialogInterface, int n) {
                                                         MainActivity.Update_User_Inf();
@@ -172,7 +172,7 @@ public class LoginActivity extends AppCompatActivity   {
     private void LoginSuccess(){
         //登陆成功之后的处理
         SettingFragment.setLoginTrue();
-        Toast.makeText(this, "欢迎回来！",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Welcome Back！",Toast.LENGTH_SHORT).show();
 
     }
 }
