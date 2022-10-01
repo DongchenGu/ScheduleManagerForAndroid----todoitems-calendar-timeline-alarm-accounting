@@ -14,6 +14,9 @@ It could also synchronizes user data to the server(we don't maintain the server 
 
 # How to use
 - minimalist theme  
+<div align=center>
+<img src="https://user-images.githubusercontent.com/53630148/193410415-79bab4d6-0147-4ce7-bdaf-bae88b5d735f.gif">
+</div>
 ![20221001_084621](https://user-images.githubusercontent.com/53630148/193410415-79bab4d6-0147-4ce7-bdaf-bae88b5d735f.gif)
 
 
