@@ -20,9 +20,16 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
 
 # How to use
 - minimalist theme  
+  thème minimaliste
 <div align=center>
 <img src="https://user-images.githubusercontent.com/53630148/193410415-79bab4d6-0147-4ce7-bdaf-bae88b5d735f.gif">
-</div>
+</div>  
+
+- Calendar  
+  Calendrier
+<div align=center>
+<img src="https://user-images.githubusercontent.com/53630148/193412272-78d913d1-6602-45cb-bc67-23ba5614d387.gif">
+</div>  
 
 
 
