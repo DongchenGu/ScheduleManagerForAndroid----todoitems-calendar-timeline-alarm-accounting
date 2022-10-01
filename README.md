@@ -1,6 +1,8 @@
 # ScheduleManagerForAndroid----todoitems-calendar-timeline-alarm-accounting
+![ic_launcher_round](https://user-images.githubusercontent.com/53630148/193409294-eb907c2d-078a-4e0b-ac90-6e9590bbb28f.png)
+
 <div align=center>
-<img src="https://user-images.githubusercontent.com/53630148/193408961-2bc52463-f07f-4 vdbc-914a-f3a58c576186.png">
+<img src="https://user-images.githubusercontent.com/53630148/193409294-eb907c2d-078a-4e0b-ac90-6e9590bbb28f.png">
 </div>
 
 # Description
