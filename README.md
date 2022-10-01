@@ -42,12 +42,13 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
     Cliquez sur le bouton Modifier dans le coin supérieur droit pour choisir la liste de rappels que vous souhaitez supprimer.  
   
    
-<div align=left>
-<img src="https://user-images.githubusercontent.com/53630148/193413066-0cce816b-e9d1-487b-a44f-2887eaf591e2.gif">
+<div align=center>
+  <img src="https://user-images.githubusercontent.com/53630148/193413066-0cce816b-e9d1-487b-a44f-2887eaf591e2.gif">
+  <img src="https://user-images.githubusercontent.com/53630148/193413554-7ebcbe7e-5206-4575-a5c9-ae198d1e9ca9.gif">
 </div>
-<div align=right>
+<!-- <div align=right>
 <img src="https://user-images.githubusercontent.com/53630148/193413554-7ebcbe7e-5206-4575-a5c9-ae198d1e9ca9.gif">
-</div> 
+</div>  -->
     
 
     
