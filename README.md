@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/53630148/193409294-eb907c2d-078a-4e0b-ac90-6e9590bbb28f.png">
 </div>
 
-# Description
+# Description(english/french)
 It's an Android application based on Java language and Android SQlite database. Aims to improve the user's work efficiency and facilitate the user's itinerary planning. 
 It integrates the Calendar and daily Timeline, which can automatically classify the to-do items created by the user, as well as automatic reminders in the background. 
 It could also synchronizes user data to the server(we don't maintain the server anymore).  
