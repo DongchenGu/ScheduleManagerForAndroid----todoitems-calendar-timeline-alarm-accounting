@@ -208,7 +208,7 @@ public class SettingFragment extends Fragment{
                             @Override
                             public void onClick(DialogInterface dialogInterface, int n) {
                                 MainActivity.Delete_All();
-                                Toast.makeText(getContext(), "已清除用户所有数据", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Sample Data has been deleted", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {

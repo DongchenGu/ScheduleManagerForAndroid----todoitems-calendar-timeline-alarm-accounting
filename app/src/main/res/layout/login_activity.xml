@@ -38,7 +38,7 @@
             android:layout_margin="4dp"
             android:background="@drawable/bg_top_radius"
             android:backgroundTint="#F3F4F5"
-            android:hint="用户名"
+            android:hint="UserName"
             app:boxBackgroundColor="#F3F4F5"
             app:boxBackgroundMode="none"
             app:boxStrokeColor="@color/colorPrimary">
@@ -59,7 +59,7 @@
             android:layout_margin="4dp"
             android:background="@drawable/bg_top_radius"
             android:backgroundTint="#F3F4F5"
-            android:hint="密码"
+            android:hint="Password"
             app:boxBackgroundColor="#F3F4F5"
             app:boxBackgroundMode="none"
             app:boxStrokeColor="@color/colorPrimary">
@@ -88,7 +88,7 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/btn_bg_white"
                 android:backgroundTint="@color/colorPrimary"
-                android:text="确认"
+                android:text="Yes"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
@@ -101,7 +101,7 @@
                 android:layout_marginRight="12dp"
                 android:layout_toStartOf="@id/sure_button"
                 android:layout_toLeftOf="@id/sure_button"
-                android:text="取消"
+                android:text="Cancel"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold" />

@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             MainActivity.user_name = user;
             SettingFragment.setLoginTrue();
             Log.d("user",MainActivity.user_name);
-            Toast.makeText(this, "欢迎回来！",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Welcome Back！",Toast.LENGTH_SHORT).show();
         }
         findViewById(R.id.calendar_tab).setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
@@ -1314,40 +1314,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         MainActivity.INSERT_List(String.valueOf(9994),"Work",imgIds[4].toString(),"5" );
 
 
-        MainActivity.INSERT("ExampleList",String.valueOf(8999),"这里展现你当前未完成的提醒事项"," "," ");
-        MainActivity.INSERT("ExampleList",String.valueOf(8998),"点击左边的圆圈就标记完成了"," "," ");
-        MainActivity.INSERT("ExampleList",String.valueOf(8997),"点错了的话再点一次"," "," ");
-        MainActivity.INSERT("ExampleList",String.valueOf(8996),"长按事项还能查看更多的信息","通过这里查看更详细的内容"," ");
-        MainActivity.INSERT("ExampleList",String.valueOf(8995),"右上角的才能还能帮助你看到完成的事项"," "," ");
+        MainActivity.INSERT("ExampleList",String.valueOf(8999),"All your reminders(unfinished items) are shown here"," "," ");
+        MainActivity.INSERT("ExampleList",String.valueOf(8998),"Click the circle on the left, if task is completed"," "," ");
+        MainActivity.INSERT("ExampleList",String.valueOf(8997),"Click again if you made mistake"," "," ");
+        MainActivity.INSERT("ExampleList",String.valueOf(8996),"Long press to view the details of an item","Details of the schedule is shown here"," ");
+        MainActivity.INSERT("ExampleList",String.valueOf(8995),"Click on the upper right corner to see what has been done"," "," ");
 
-        MainActivity.INSERT("ReminderList",String.valueOf(8989),"下午五点去餐厅"," ",date+"-17-0");
-        MainActivity.INSERT("ReminderList",String.valueOf(8988),"去图书馆还书"," "," ");
-        MainActivity.INSERT("ReminderList",String.valueOf(8987),"到干洗店取衣服"," ",date+"-19-0");
+        MainActivity.INSERT("ReminderList",String.valueOf(8989),"Go the restaurant at 5 pm"," ",date+"-17-0");
+        MainActivity.INSERT("ReminderList",String.valueOf(8988),"Return my book the the Library"," "," ");
+        MainActivity.INSERT("ReminderList",String.valueOf(8987),"Pick up clothes from dry cleaners"," ",date+"-19-0");
 
-        MainActivity.INSERT("memorandum",String.valueOf(8979),"给王明打电话祝他生日快乐"," "," ");
-        MainActivity.INSERT("memorandum",String.valueOf(8978),"买聚会的饮料"," "," ");
-        MainActivity.INSERT("memorandum",String.valueOf(8977),"洗车"," "," ");
-        MainActivity.INSERT("memorandum",String.valueOf(8976),"约慧雯吃饭"," "," ");
-        MainActivity.INSERT("memorandum",String.valueOf(8975),"到花店取花"," ",date+"-15-35");
+        MainActivity.INSERT("memorandum",String.valueOf(8979),"call Alex"," "," ");
+        MainActivity.INSERT("memorandum",String.valueOf(8978),"Prepare for the party"," "," ");
+        MainActivity.INSERT("memorandum",String.valueOf(8977),"wash my bike"," "," ");
+        MainActivity.INSERT("memorandum",String.valueOf(8976),"appointment with Lily"," "," ");
+        MainActivity.INSERT("memorandum",String.valueOf(8975),"Pick up flowers"," ",date+"-15-35");
 
-        MainActivity.INSERT("ShoppingList",String.valueOf(8969),"牛奶"," "," ");
-        MainActivity.INSERT("ShoppingList",String.valueOf(8968),"鸡蛋"," "," ");
-        MainActivity.INSERT("ShoppingList",String.valueOf(8967),"面包"," "," ");
-        MainActivity.INSERT("ShoppingList",String.valueOf(8966),"草莓"," "," ");
-        MainActivity.INSERT("ShoppingList",String.valueOf(8965),"纸巾"," "," ");
-        MainActivity.INSERT("ShoppingList",String.valueOf(8964),"牙膏"," "," ");
+        MainActivity.INSERT("ShoppingList",String.valueOf(8969),"Milk"," "," ");
+        MainActivity.INSERT("ShoppingList",String.valueOf(8968),"Egg"," "," ");
+        MainActivity.INSERT("ShoppingList",String.valueOf(8967),"Bread"," "," ");
+        MainActivity.INSERT("ShoppingList",String.valueOf(8966),"StrawBerry"," "," ");
+        MainActivity.INSERT("ShoppingList",String.valueOf(8965),"Tissue"," "," ");
+        MainActivity.INSERT("ShoppingList",String.valueOf(8964),"toothpaste"," "," ");
 
-        MainActivity.INSERT("BirthdayParty",String.valueOf(8959),"蛋糕"," "," ");
-        MainActivity.INSERT("BirthdayParty",String.valueOf(8958),"各种玩具"," "," ");
-        MainActivity.INSERT("BirthdayParty",String.valueOf(8957),"邀请人名单"," "," ");
-        MainActivity.INSERT("BirthdayParty",String.valueOf(8956),"点心"," "," ");
-        MainActivity.INSERT("BirthdayParty",String.valueOf(8955),"小礼物"," "," ");
+        MainActivity.INSERT("BirthdayParty",String.valueOf(8959),"birthday cake"," "," ");
+        MainActivity.INSERT("BirthdayParty",String.valueOf(8958),"toys"," "," ");
+        MainActivity.INSERT("BirthdayParty",String.valueOf(8957),"Brand New Laptop"," "," ");
+        MainActivity.INSERT("BirthdayParty",String.valueOf(8956),"presents"," "," ");
+        MainActivity.INSERT("BirthdayParty",String.valueOf(8955),"taking photos"," "," ");
 
-        MainActivity.INSERT("Work",String.valueOf(8949),"整理实际案例"," "," ");
-        MainActivity.INSERT("Work",String.valueOf(8948),"和张杨喝咖啡"," "," ");
-        MainActivity.INSERT("Work",String.valueOf(8947),"完成提案文件","需要在明天之前提交文档"," ");
-        MainActivity.INSERT("Work",String.valueOf(8946),"安排员工会议时间"," "," ");
-        MainActivity.INSERT("Work",String.valueOf(8945),"发休假申请"," "," ");
+        MainActivity.INSERT("Work",String.valueOf(8949),"Organize actual cases"," "," ");
+        MainActivity.INSERT("Work",String.valueOf(8948),"caffe time"," "," ");
+        MainActivity.INSERT("Work",String.valueOf(8947),"Complete the proposal document","Documentation needs to be submitted by tomorrow"," ");
+        MainActivity.INSERT("Work",String.valueOf(8946),"Schedule staff meeting times"," "," ");
+        MainActivity.INSERT("Work",String.valueOf(8945),"send party invitations"," "," ");
         Insert_Schedule("999",date,""+9,""+10,"Marketing team meeting","","",""+0);
         Insert_Schedule("998",date,""+11,""+12,"Zoom meeting","","",""+2);
         Insert_Schedule("997",date,""+13,""+14,"Conference call with Alex","","",""+4);

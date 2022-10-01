@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity   {
             public void onClick(View view) {
 
                 if (!isPasswordValid(password.getText())) {
-                    password_layout.setError("密码不能少于8位");
+                    password_layout.setError("Password must be longer than 8 characters");
                     Log.d("password_error", "密码长度不正确");
                 }
                 else{
@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity   {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int n) {
                                         MainActivity.CreateUser(user_name.getText().toString(), password.getText().toString());
-                                        Toast.makeText(LoginActivity.this, "欢迎你，新用户！", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Welcome，new User！", Toast.LENGTH_SHORT).show();
                                         final SharedPreferences SP_user = getSharedPreferences("user_name",MODE_PRIVATE);
                                         SharedPreferences.Editor editor = SP_user.edit();
                                         editor.putString("user_name",user_name.getText().toString());
@@ -135,7 +135,7 @@ public class LoginActivity extends AppCompatActivity   {
                         finish();
                     } else {
                         //password_layout.setError(null); // Clear the error
-                        password_layout.setError("密码不正确");
+                        password_layout.setError("Password is not correct!");
                         Log.d("判断密码：","密码不正确");
                     }
                 }
