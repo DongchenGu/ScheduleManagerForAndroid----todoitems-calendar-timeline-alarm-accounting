@@ -13,6 +13,8 @@ It could also synchronizes user data to the server(we don't maintain the server 
 -	Create customized Android Service that runs in the background to remind users of upcoming to-do items.
 
 # How to use
+- minimalist theme
+![20221001_084621](https://user-images.githubusercontent.com/53630148/193410415-79bab4d6-0147-4ce7-bdaf-bae88b5d735f.gif)
 
 
 # How to build
