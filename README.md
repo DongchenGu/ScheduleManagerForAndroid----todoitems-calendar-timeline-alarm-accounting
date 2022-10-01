@@ -31,6 +31,26 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
 <img src="https://user-images.githubusercontent.com/53630148/193412272-78d913d1-6602-45cb-bc67-23ba5614d387.gif">
 </div>  
 
+- Reminder List and Schedule items  
+    All your reminders(unfinished items) are shown here, Click the circle on the left, if task is completed.  
+    Click again if you made mistake  
+    Long press to view the details of an item","Details of the schedule is shown here, Click on the upper right corner to see what has been done  
+    Click the Edit button on the up right corner to choose the Reminder List that you want to delete.  
+    Tous vos rappels (éléments inachevés) sont affichés ici, cliquez sur le cercle à gauche, si la tâche est terminée.  
+    Cliquez à nouveau si vous avez fait une erreur  
+    Appuyez longuement pour afficher les détails d'un élément", "Les détails du calendrier sont affichés ici, cliquez sur le coin supérieur droit pour voir ce qui a été fait  
+    Cliquez sur le bouton Modifier dans le coin supérieur droit pour choisir la liste de rappels que vous souhaitez supprimer.  
+    
+    
+   
+<div align=center>
+<img src="https://user-images.githubusercontent.com/53630148/193413066-0cce816b-e9d1-487b-a44f-2887eaf591e2.gif">
+</div>  
+    
+
+    
+    
+
 
 
 # How to build
