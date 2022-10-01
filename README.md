@@ -45,11 +45,11 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
 <div align=center>
   <img src="https://user-images.githubusercontent.com/53630148/193413066-0cce816b-e9d1-487b-a44f-2887eaf591e2.gif">
   <img src="https://user-images.githubusercontent.com/53630148/193413554-7ebcbe7e-5206-4575-a5c9-ae198d1e9ca9.gif">
-</div>
-<!-- <div align=right>
-<img src="https://user-images.githubusercontent.com/53630148/193413554-7ebcbe7e-5206-4575-a5c9-ae198d1e9ca9.gif">
-</div>  -->
-    
+</div>  
+<div align=center>
+<img src="https://user-images.githubusercontent.com/53630148/193413756-8df3c3a5-8966-414e-983a-19498d67b061.gif">
+</div> 
+
 
     
     
