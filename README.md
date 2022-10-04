@@ -50,14 +50,16 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
 <img src="https://user-images.githubusercontent.com/53630148/193413756-8df3c3a5-8966-414e-983a-19498d67b061.gif">
 </div>  
 
-- timeline  
-  chronologie  
+- timeline/chronologie  
+  All the schedules created in the Calendar and all the reminders created in the reminder list will be shown here in the line of time for that day.  
+  Tous les horaires créés dans le calendrier et tous les rappels créés dans la liste des rappels seront affichés ici dans la ligne de temps pour ce jour.
   <div align=center>
   <img src="https://user-images.githubusercontent.com/53630148/193808624-15254cc5-e86a-4bc7-972e-f5503fec8cfc.gif">
   </div>  
 
-- Pomodoro Technique  
-  Technique Pomodoro  
+- Pomodoro Technique/Technique Pomodoro  
+  it's a time counter for the Pomodoro Technique.  
+  c'est un compteur de temps pour la Technique Pomodoro.  
   <div align=center>
   <img src="https://user-images.githubusercontent.com/53630148/193807528-7cca555e-2240-4dff-be07-448b80245dc1.gif">
   </div>  
