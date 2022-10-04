@@ -53,14 +53,14 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
 - timeline  
   chronologie  
   <div align=center>
-<img src="https://user-images.githubusercontent.com/53630148/193413756-8df3c3a5-8966-414e-983a-19498d67b061.gif">
-</div>  
+  <img src="https://user-images.githubusercontent.com/53630148/193808624-15254cc5-e86a-4bc7-972e-f5503fec8cfc.gif">
+  </div>  
 
 - Pomodoro Technique  
   Technique Pomodoro  
   <div align=center>
-<img src="https://user-images.githubusercontent.com/53630148/193807528-7cca555e-2240-4dff-be07-448b80245dc1.gif">
-</div>  
+  <img src="https://user-images.githubusercontent.com/53630148/193807528-7cca555e-2240-4dff-be07-448b80245dc1.gif">
+  </div>  
 
 
 
