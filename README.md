@@ -17,7 +17,8 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
   Utilisez plusieurs fragments pour chaque activité pour fournir une belle interface et utilisez Event Bus and Provider pour gérer le statut entre les widgets parents et les widgets enfants.  
 -	Fully Customized Components are used, inherited from the "View", I overwrite many components such as onMeasure( ), onLayout( ), and onDraw( ). The recursive process of Measure() is a commonly used process. Its technical implementation process is: measure( ) → onMeasure( ) → child.Measure( ), which implements a gradual calling process and carries the data through the data. The recursive call of the entire measure tree structure is implemented.  
   Des composants entièrement personnalisés sont utilisés, hérités de la "View", j'écrase de nombreux composants tels que onMeasure(), onLayout() et onDraw(). Le processus récursif de Measure() est un processus couramment utilisé. Son processus d'implémentation technique est : measure( ) → onMeasure( ) → child.Measure( ), qui implémente un processus d'appel progressif et transporte les données à travers les données. L'appel récursif de toute l'arborescence des mesures est implémenté.  
--	Create customized Android Service that runs in the background to remind users of upcoming to-do items./Créez un service Android personnalisé qui s'exécute en arrière-plan pour rappeler aux utilisateurs les tâches à effectuer à venir.  
+-	Create customized Android Service that runs in the background to remind users of upcoming to-do items.  
+  Créez un service Android personnalisé qui s'exécute en arrière-plan pour rappeler aux utilisateurs les tâches à effectuer à venir.  
 
 # How to use
 - minimalist theme  
