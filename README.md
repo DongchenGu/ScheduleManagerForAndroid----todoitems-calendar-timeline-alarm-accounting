@@ -63,6 +63,14 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
   <div align=center>
   <img src="https://user-images.githubusercontent.com/53630148/193807528-7cca555e-2240-4dff-be07-448b80245dc1.gif">
   </div>  
+  
+ - setting/paramètre  
+   setting fragment: use could login or create new account.  
+   fragment de paramètre : l'utilisation peut se connecter ou créer un nouveau compte.  
+
+  <div align=center>
+  <img src="https://user-images.githubusercontent.com/53630148/193809973-cb5477e0-ce9c-4c43-8b03-92fe91f70cdf.gif">
+  </div>  
 
 
 
