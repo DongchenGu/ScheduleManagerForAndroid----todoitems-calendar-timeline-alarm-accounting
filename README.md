@@ -48,7 +48,21 @@ Il pourrait également synchroniser les données de l'utilisateur avec le serveu
 </div>  
 <div align=center>
 <img src="https://user-images.githubusercontent.com/53630148/193413756-8df3c3a5-8966-414e-983a-19498d67b061.gif">
+</div>  
+
+- timeline 
+  chronologie  
+  <div align=center>
+<img src="https://user-images.githubusercontent.com/53630148/193413756-8df3c3a5-8966-414e-983a-19498d67b061.gif">
 </div> 
+
+- Pomodoro Technique 
+  Technique Pomodoro 
+  <div align=center>
+<img src="https://user-images.githubusercontent.com/53630148/193807528-7cca555e-2240-4dff-be07-448b80245dc1.gif">
+</div> 
+
+
 
 
     
